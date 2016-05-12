@@ -20,9 +20,9 @@
 #define PERSON_PER_SERVER 5
 //Define
 //----------
-typedef struct MSG_BUF{ 		/* 消息定义的参照格式 */
-  	long mtype;       		/* 消息类型（大于0的长整数）  */
-	char mtext[BUFFER+1]; 		/*消息正文*/
+typedef struct MSG_BUF{ 		//消息定义的参照格式
+  	long mtype;       		// 消息类型（大于0的长整数）  1注册请求 2注销请求 3其他指令 4消息
+	char mtext[BUFFER+1]; 		//消息正文
 }msgbuf;
 //Message Buffer Struct
 typedef struct msqid_ds msgque;
